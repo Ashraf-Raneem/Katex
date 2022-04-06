@@ -1,11 +1,42 @@
+:root{
+    --primary : "#1F33D8";
+    --yellow : "#FFD456";
+}
+
 body {
     font-family: 'Lato', sans-serif;
+}
+
+// utilities
+.text-primary{
+    color: var(--primary);
+}
+.text-yellow{
+    color: var(--yellow);
+}
+.button-primary{
+    background-color: var(--primary);
+    color: white;
+}
+.button-white {
+    background-color: white;
+    color: black;
+}
+
+h1,h2,h3 {
+    font-weight: bold;
+    font-size: 3em;
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 // Navbar
 .intro{
     &-navbar{
-        margin: 20px 0px;
+        background: #F4F5FA;
+        padding: 20px 0px;
     }
     &-wrap{
         width: 100%;
@@ -18,5 +49,104 @@ body {
     }
     &-nav-item{
         color: black !important;
+    }
+}
+
+// Hero
+.hero{
+    &-container {
+        background: #F4F5FA;
+    }
+    &-inner{
+        display: flex;
+        flex-direction: row;
+    }
+    &-info {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+    &-action{
+        display: flex;
+        flex-direction: row;
+        margin: 40px 0px;
+        .btn{
+            margin-right: 20px;
+            border-radius: 20px;
+            padding: 10px 40px;
+            border: none;
+        }
+    }
+    &-tree{
+        //height: 600px;
+        //background: url("../assets/images/hero-bg.png") no-repeat top center/cover;
+    }
+}
+
+// About 
+.about{
+    &-header {
+        text-align: center;
+        margin: 6rem 0px;
+    }
+    &-content {
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+    }
+    &-aside{
+       h2{
+           margin-bottom: 4rem;
+           font-size: 2.5rem;
+       }
+    }
+    &-video{
+        &-text{
+            margin-left: 3rem;
+            margin-bottom: 4rem;
+            &-link{
+                display: flex;
+                flex-direction: row;
+                color: var(--primary);
+                font-weight: bold;
+                text-decoration: none;
+            }
+            p {
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 1400px) {
+    .about{
+        &-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-aside{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+         }
+        &-video{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &-text{
+                margin-left: 3rem;
+                margin: 4rem 0px;
+                
+            }
+        }
     }
 }
