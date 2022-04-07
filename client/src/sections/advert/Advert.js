@@ -8,7 +8,7 @@ const Advert = () => {
       <Row className="advert-container">
         <Col md={12} lg={6} xl={4}>
           <div className="wallet-container primary-wallet">
-            <div className="wallet-header">
+            <div className="wallet-header advert-header">
               {" "}
               <h4>Akacoin Community</h4>
             </div>
@@ -22,9 +22,9 @@ const Advert = () => {
         </Col>
         <Col md={12} lg={6} xl={4}>
           <div className="wallet-container secondary-wallet">
-            <div className="wallet-header">
+            <div className="wallet-header advert-header">
               {" "}
-              <h4>Become A Validator</h4>
+              <h4>Become a Validator</h4>
             </div>
             <div className="wallet-text">
               <p>
@@ -38,7 +38,7 @@ const Advert = () => {
         </Col>
         <Col md={12} lg={12} xl={4}>
           <div className="wallet-container primary-wallet advert-card-mx">
-            <div className="wallet-header">
+            <div className="wallet-header advert-header">
               {" "}
               <h4>Dev. Resource</h4>
             </div>
