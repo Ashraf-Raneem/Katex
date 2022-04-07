@@ -154,6 +154,8 @@ a {
         border-radius: 15px;
         display: flex;
         flex-direction: column;
+        position: relative;
+        margin: 1rem;
     }
     &-header {
         display: flex;
@@ -207,8 +209,45 @@ a {
     }
 }
 
+// Advert
+.advert{
+    &-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 8rem 0px;
+    }
+    &-card-mx{
+        height: 462px;
+        width: 430px;
+    }
+    &-action{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 60px;
+        width: 194px;
+        margin-left: 0px;
+        border-radius: 0px 50px 50px 0px;
+        margin-bottom: 3.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-primary{
+            background-color: var(--yellow);
+            color: black;
+            font-weight: bold;
+        }
+        &-secondary{
+            background-color: var(--primary);
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
 @media screen and (max-width : 1400px) {
-    .hero-tree{
+    .hero-tree {
         display: none;
     }
     .about{
