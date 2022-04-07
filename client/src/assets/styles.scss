@@ -1,6 +1,6 @@
 :root{
-    --primary : "#1F33D8";
-    --yellow : "#FFD456";
+    --primary : #1F33D8;
+    --yellow : #FFD456;
 }
 
 body {
@@ -61,13 +61,25 @@ a {
         display: flex;
         flex-direction: row;
     }
-    &-info {
+    &-content {
         width: 90%;
         display: flex;
+        margin-left: 10rem;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         text-align: left;
+    }
+    &-info{
+        width: 700px;
+        margin: 0px auto;
+        h1{
+            font-size: 72px;
+        }
+        p{
+            font-size: 22px;
+            font-weight: 700;
+        }
     }
     &-action{
         display: flex;
@@ -123,7 +135,50 @@ a {
 }
 
 
+// Wallet Cards
+.primary-wallet{
+    background-color: var(--primary) ;
+    background-image: url("../assets/images/wallet-bg-blue.png");
+    color: white;
+}
+.secondary-wallet{
+    background-color: var(--yellow) ;
+    background-image: url("../assets/images/wallet-bg-yellow.png");
+    color: black;
+}
+.wallet{
+    &-container{
+        height: 462px;
+        width: 373px;
+        padding: 20px 30px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    &-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 2rem 0px;
+        h4 {
+            margin-left: 12px;
+            font-size: 32px;
+        }
+    }
+    &-icons{
+        margin: 12px 0px;
+    }
+    &-action{
+        margin-top: 8rem;
+        margin-left: 2rem;
+    }
+}
+
 @media screen and (max-width : 1400px) {
+    .hero-tree{
+        display: none;
+    }
     .about{
         &-content{
             display: flex;

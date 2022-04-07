@@ -6,8 +6,8 @@ import { BsGithub } from "react-icons/bs";
 const Hero = () => {
   return (
     <div className="hero-container">
-      <div className="container container-ld hero-inner">
-        <div className="">
+      <div className="hero-inner">
+        <div className="hero-content">
           <div className="hero-info">
             <p>
               Intoducing <span className="text-primary">AKA</span>
