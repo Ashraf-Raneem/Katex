@@ -175,6 +175,38 @@ a {
     }
 }
 
+// Quick start 
+.qs {
+    &-content{
+        display: flex;
+        flex-direction: row;
+        margin: 1.5rem 0px;
+    }
+    &-image{
+        height: 130px;
+        width: 130px;
+        &-container{
+            background-color: var(--yellow);
+            border-radius: 999px;
+        }
+    }
+    &-desc{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        margin-left: 2rem;
+        width: 300px;
+        h3{
+            font-size: 23px;
+            font-weight: bold;
+        }
+        span{
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
+
 @media screen and (max-width : 1400px) {
     .hero-tree{
         display: none;
