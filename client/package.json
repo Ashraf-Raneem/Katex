@@ -11,8 +11,10 @@
     "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",
     "react-scripts": "5.0.0",
+    "react-slick": "^0.28.1",
     "reactstrap": "^9.0.1",
     "sass": "^1.49.11",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

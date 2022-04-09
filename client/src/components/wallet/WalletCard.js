@@ -1,26 +1,26 @@
 import React from "react";
-import HeadIcon from "../../assets/images/icon-settings.png";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { AiOutlineDesktop, AiOutlineMobile, AiOutlineGlobal } from "react-icons/ai";
 
-const WalletCard = () => {
+const WalletCard = ({ head, theme, desc }) => {
   return (
-    <div className="wallet-container primary-wallet">
+    <div className={`wallet-container ${theme}-wallet`}>
       <div className="wallet-header">
-        <img src={HeadIcon} alt="icon"></img>
-        <h4>AkaSafe</h4>
+        <img src={head.icon} alt="icon"></img>
+        <h4>{head.text}</h4>
       </div>
-      <div className="wallet-text">
-        Start exploring blockchain applications in seconds. Trusted by over 1 million users worldwide
-      </div>
+      <div className="wallet-text">{desc}</div>
       <div className="wallet-icons">
-        <AiOutlineMobile size="1.2rem" style={{ marginRight: "12px", marginTop: "3px" }} />
-        <AiOutlineDesktop size="1.2rem" style={{ marginRight: "12px", marginTop: "3px" }} />
-        <AiOutlineGlobal size="1.2rem" style={{ marginRight: "12px", marginTop: "3px" }} />
+        <AiOutlineMobile size="1.5rem" style={{ marginRight: "12px", marginTop: "3px" }} />
+        <AiOutlineDesktop size="1.5rem" style={{ marginRight: "12px", marginTop: "3px" }} />
+        <AiOutlineGlobal size="1.5rem" style={{ marginRight: "12px", marginTop: "3px" }} />
       </div>
-      <div className="wallet-action">
+      <div
+        className={`wallet-action ${theme === "secondary" ? "advert-action advert-action-secondary" : ""}`}
+        style={{ width: theme === "secondary" ? "250px" : "" }}
+      >
         <span>Choose Wallet</span>
-        <HiOutlineArrowNarrowRight size="1.2rem" style={{ marginLeft: "12px", marginTop: "3px" }} />
+        <HiOutlineArrowNarrowRight size="2rem" style={{ marginLeft: "12px", marginBottom: "3px" }} />
       </div>
     </div>
   );

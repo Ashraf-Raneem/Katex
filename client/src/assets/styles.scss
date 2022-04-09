@@ -157,6 +157,12 @@ a {
         position: relative;
         margin: 1rem;
     }
+    &-cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1280px;
+    }
     &-header {
         display: flex;
         flex-direction: row;
@@ -172,8 +178,18 @@ a {
         margin: 12px 0px;
     }
     &-action{
-        margin-top: 8rem;
-        margin-left: 2rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: 3rem;
+        margin-bottom: 3.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-size: 18px;
+            line-height: 28px;
+        }
     }
 }
 
