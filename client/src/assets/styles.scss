@@ -179,6 +179,9 @@ a {
 
 // Quick start 
 .qs {
+    &-container{
+        margin-left: 6rem;
+    }
     &-content{
         display: flex;
         flex-direction: row;
@@ -282,9 +285,75 @@ a {
     }
 }
 
+// Footer 
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 2rem 4rem;
+    &-container {
+        display: flex;
+        flex-direction: row;
+    }
+    &-brand {
+        width: 40px;
+        margin-bottom: 20px;
+    }
+    &-main {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        span {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        &-socials{
+            display: flex;
+            flex-direction: row;
+            margin-top: 10px;
+        }
+    }
+    &-sub{
+        &-column{
+            width: 250px;
+            h4{
+                color: #0E133A;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+        &-links{
+            display: flex;
+            flex-direction: column;
+            span{
+                margin-top: 16px;
+                color:  #5B5D6D;
+            }
+        }
+    }
+    &-index{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+        color: #5B5D6D;
+    }
+}
+
+
 @media screen and (max-width : 1400px) {
     .hero-tree {
         display: none;
+    }
+    .qs {
+        &-container{
+            margin-left: 0;
+        }
     }
     .account{
         &-flex{
@@ -316,5 +385,8 @@ a {
                 
             }
         }
+    }
+    .footer{
+        padding: 2rem 1rem;
     }
 }
