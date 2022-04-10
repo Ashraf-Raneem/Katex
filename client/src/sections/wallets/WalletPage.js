@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import WalletCard from "../../components/wallet/WalletCard";
-import { walletData } from "../../utils/Data";
 import Slider from "react-slick";
+import { url } from "../../utils/urls";
 
 const settings = {
   dots: true,
@@ -32,16 +32,26 @@ const settings = {
 };
 
 const WalletPage = () => {
+  const [walletData, setData] = useState();
+  useEffect(() => {
+    fetch(url + "wallet")
+      .then((res) => res.json())
+      .then((res) => setData(res))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <div className="container container-lg">
       <div className="about-header">
         <h1>Choose Your Wallets</h1>
       </div>
-      <Slider {...settings} className="wallet-cards">
-        {walletData.map((item) => (
-          <WalletCard key={item.id} head={item.head} theme={item.theme} desc={item.desc} />
-        ))}
-      </Slider>
+      {walletData && (
+        <Slider {...settings} className="wallet-cards">
+          {walletData.map((item) => (
+            <WalletCard key={item.id} head={item.head} theme={item.theme} desc={item.desc} />
+          ))}
+        </Slider>
+      )}
     </div>
   );
 };

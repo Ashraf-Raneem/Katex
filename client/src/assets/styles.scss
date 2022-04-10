@@ -44,6 +44,12 @@ a {
         flex-direction: row;
         justify-content: space-between;
     }
+    &-action{
+        display: none;
+    }
+    &-nav-sm{
+        display: none;
+    }
     &-nav-link{
         color: black !important;
     }
@@ -60,6 +66,7 @@ a {
     &-inner{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
     &-content {
         width: 90%;
@@ -91,10 +98,6 @@ a {
             padding: 10px 40px;
             border: none;
         }
-    }
-    &-tree{
-        //height: 600px;
-        //background: url("../assets/images/hero-bg.png") no-repeat top center/cover;
     }
 }
 
@@ -131,6 +134,7 @@ a {
                 font-weight: 500;
             }
         }
+        
     }
 }
 
@@ -361,6 +365,16 @@ a {
     }
 }
 
+@media screen and (max-width: 1610px) {
+    .hero{
+        &-tree{
+            img{
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
 
 @media screen and (max-width : 1400px) {
     .hero{
@@ -431,6 +445,10 @@ a {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            &-image > img {
+                height: auto;
+                width: 100%;
+            }
          }
         &-video{
             display: flex;
@@ -440,11 +458,109 @@ a {
             &-text{
                 margin-left: 3rem;
                 margin: 4rem 0px;
-                
+            }
+            &-image > img{
+                height: auto;
+                width: 100%;
             }
         }
     }
     .footer{
         padding: 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .intro{
+        &-nav{
+            display: none;
+            &-sm{
+                width: 250px;
+                height: 101vh;
+                position: fixed;
+                left: 0;
+                top: 0;
+                background: #F4F5FA;
+                z-index: 2;
+                transition: all 0.5s;
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow:5px 10px #F4F5FA;
+                .nav{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        &-action{
+            display: block;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 666px) {
+    .about{
+        &-header{
+            h1{
+                font-size: 32px;
+            }
+        }
+        &-aside{
+            text-align: center;
+            h2{
+                font-size: 28px;
+            }
+        }
+    }
+    .account{
+        &-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .wallet {
+        &-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 2rem 0px;
+            h4 {
+                margin-left: 12px;
+                font-size: 32px;
+            }
+        }
+    }
+    .footer{
+        &-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-brand{
+            width: 100%;
+        }
+        &-main{
+            margin-bottom: 2rem;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }

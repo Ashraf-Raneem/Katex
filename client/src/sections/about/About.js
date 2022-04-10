@@ -23,7 +23,9 @@ const About = () => {
               of projects spanning DeFi, NFTs, Web3 and more.
             </p>
             <div className="about-video-text-link">
-              <a className="link">Explore System</a>
+              <a href="#link" className="link" onClick={(ev) => ev.preventDefault()}>
+                Explore System
+              </a>
               <HiOutlineArrowNarrowRight size="1.2rem" style={{ marginLeft: "12px", marginTop: "3px" }} />
             </div>
           </div>

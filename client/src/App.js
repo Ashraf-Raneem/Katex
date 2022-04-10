@@ -1,6 +1,5 @@
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
-import Navbar2 from "./components/navbar/Navbar2";
 import About from "./sections/about/About";
 import Account from "./sections/account/Account";
 import Advert from "./sections/advert/Advert";
@@ -11,7 +10,7 @@ import WalletPage from "./sections/wallets/WalletPage";
 const App = () => {
   return (
     <div className="App">
-      <Navbar2 />
+      <Navbar />
       <Hero />
       <About />
       <WalletPage />
