@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Admin from "./pages/Admin";
 import Home from "./pages/Home";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
+      <ToastContainer />
     </div>
   );
 };

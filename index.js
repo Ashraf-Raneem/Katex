@@ -11,6 +11,8 @@ app.use(express.json());
 app.use(cors());
 
 var data = require("./config/Data");
+var walletData = data.walletData;
+var hero = data.hero;
 
 app.get("/", (req, res) => {
     res.send("Hello World!");
@@ -19,54 +21,44 @@ app.get("/", (req, res) => {
 
 // Gets the hero section data 
 app.get("/api/hero", (req, res) => {
-  res.send(data.hero);
+  res.send(hero);
 });
 
 // Gets all the wallet
 app.get("/api/wallet", (req, res) => {
-  res.send(data.walletData);
+  res.send(walletData);
 });
 
-// Adds a new user
+// Updates hero section descriptiom
+app.post("/api/hero/desc",(req,res) => {
+  if (req.body){
+    let heroBody = req.body;
+    hero.text = heroBody.text;
+    res.send(hero);
+  } else {
+    res.status(404).send("Unable to process data");
+  }
+})
+
+// Adds a wallet
 app.post("/api/wallet", (req, res) => {
   if (req.body) {
-    let newUser = req.body;
-    walletData.push(newUser);
-    res.send(users);
+    let newWallet = req.body;
+    walletData.push(newWallet);
+    res.send(walletData);
   } else {
     res.status(404).send("Unable to process data");
   }
 });
 
-// Updates user data
-app.put("/api/wallet/:id", (req, res) => {
-  if (req.body) {
-    const userIndex = walletData.findIndex((el) => el._id === req.params.id);
-    if (!userIndex) {
-      res.status(404).send("No user was found to update");
-    }
-    users[userIndex] = req.body;
-    res.send(users);
-  }
-});
-
-// Fetches users with id
-app.get("/api/wallet/:id", (req, res) => {
-  const user = walletData.find((el) => el._id === req.params.id);
-  if (!user) {
-    res.status(404).send("No user was found with that id");
-  }
-  res.send(user);
-});
-
-// Deletes a user
+// Deletes a wallet
 app.delete("/api/wallet/:id", (req, res) => {
-  const userIndex = walletData.findIndex((el) => el._id === req.params.id);
-  if (!userIndex) {
-    return res.status(404).send("No user was found with that id");
+  const walletIndex = walletData.find((el) => el.id === req.params.id);
+  if (!walletIndex) {
+    return res.status(404).send("No wallet was found with that id");
   }
-  users = walletData.filter((el) => el._id !== req.params.id);
-  res.send(users);
+  walletData = walletData.filter((el) => el.id !== req.params.id);
+  res.send(walletData);
 });
 
 // Have Node serve the files for our built React app

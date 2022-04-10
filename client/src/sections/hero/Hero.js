@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HeroBg from "../../assets/images/hero-bg.png";
 import { Button } from "reactstrap";
 import { BsGithub } from "react-icons/bs";
+import { url } from "../../utils/urls";
 
 const Hero = () => {
+  const [heroData, setHeroData] = useState();
+
+  useEffect(() => {
+    fetch(url + "hero")
+      .then((res) => res.json())
+      .then((res) => {
+        setHeroData(res);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <div className="hero-container">
       <div className="hero-inner">
@@ -14,10 +26,7 @@ const Hero = () => {
               <span className="text-yellow">COIN</span>
             </p>
             <h1>Living Ecosystem Decentralized Token</h1>
-            <span>
-              Akacoin is a open source peer-to-peer digital currency,community-run technology that supports
-              cryptocurrencies and thousands of decentralized applications.
-            </span>
+            <span>{heroData && heroData.text}</span>
             <div className="hero-action">
               <Button color="primary">Get Started</Button>
               <Button className="button-white">
