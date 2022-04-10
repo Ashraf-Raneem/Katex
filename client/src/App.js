@@ -1,23 +1,14 @@
-import Footer from "./components/footer/Footer";
-import Navbar from "./components/navbar/Navbar";
-import About from "./sections/about/About";
-import Account from "./sections/account/Account";
-import Advert from "./sections/advert/Advert";
-import Hero from "./sections/hero/Hero";
-import QuickStart from "./sections/quick-start/QuickStart";
-import WalletPage from "./sections/wallets/WalletPage";
+import { Route, Routes } from "react-router-dom";
+import Admin from "./pages/Admin";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <WalletPage />
-      <QuickStart />
-      <Advert />
-      <Account />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
     </div>
   );
 };
