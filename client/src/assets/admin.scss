@@ -19,6 +19,9 @@
         &-table{
             display: flex;
             flex-direction: column;
+            &-text{
+                width: 90%;
+            }
             &-item{
                 width: 100%;
                 display: flex;
