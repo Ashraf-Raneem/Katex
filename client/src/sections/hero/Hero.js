@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import HeroBg from "../../assets/images/hero-bg.png";
 import { Button } from "reactstrap";
 import { BsGithub } from "react-icons/bs";
 import { url } from "../../utils/urls";
@@ -37,7 +36,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-tree">
-          <img src={HeroBg} alt="" />
+          <img src={heroData && heroData.img} alt="" />
         </div>
       </div>
     </div>

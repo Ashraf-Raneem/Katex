@@ -69,17 +69,6 @@ const Admin = () => {
                   </Button>
                 </div>
               </div>
-              <div className="admin-content-table-item">
-                <div className="admin-content-table-text">
-                  <p>Hero Image</p>
-                  <span>Lorem asdkhjawlidh alksdh aolkwhjd alwd aw d</span>
-                </div>
-                <div className="admin-content-table-action">
-                  <Button color="primary" onClick={toggleHeroModal}>
-                    Change
-                  </Button>
-                </div>
-              </div>
             </div>
           </div>
           <div className="admin-content">

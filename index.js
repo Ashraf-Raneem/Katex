@@ -1,7 +1,6 @@
 var express = require("express");
 var path = require("path");
 var app = express();
-
 var cors = require("cors");
 
 var port = 3000;
@@ -29,7 +28,7 @@ app.get("/api/wallet", (req, res) => {
   res.send(walletData);
 });
 
-// Updates hero section descriptiom
+// Updates hero section description
 app.post("/api/hero/desc",(req,res) => {
   if (req.body){
     let heroBody = req.body;
@@ -66,6 +65,8 @@ app.use(
   express.static(path.join(__dirname, ".","client","build"))
 );
 app.use(express.static("public"));
+
+app.use('/images', express.static('./images'));
 
 // All other GET requests not handled before will return our React app
 // app.get("*", (req, res) => {

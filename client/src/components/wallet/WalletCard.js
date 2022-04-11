@@ -6,7 +6,7 @@ const WalletCard = ({ head, theme, desc }) => {
   return (
     <div className={`wallet-container ${theme}-wallet`}>
       <div className="wallet-header">
-        {/* <img src={head.icon} alt="icon"></img> */}
+        <img src={head.icon} alt="icon"></img>
         <h4>{head.text}</h4>
       </div>
       <div className="wallet-text">{desc}</div>

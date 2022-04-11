@@ -14,7 +14,7 @@ const AddWallet = ({ toggle, setWalletData }) => {
         id: `${Math.random()}`,
         theme: "primary",
         head: {
-          //icon: HeadIcon1,
+          icon: "http://localhost:3000/images/icon-settings.png",
           text: text,
         },
         desc: desc,
