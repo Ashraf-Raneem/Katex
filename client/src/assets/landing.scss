@@ -35,7 +35,10 @@ a {
 // Navbar
 .intro{
     &-navbar{
+        width: 100vw;
         background: #F4F5FA;
+        position: fixed;
+        z-index: 999;
         padding: 20px 0px;
     }
     &-wrap{
@@ -62,6 +65,7 @@ a {
 .hero{
     &-container {
         background: #F4F5FA;
+        padding-top: 4rem;
     }
     &-inner{
         display: flex;
