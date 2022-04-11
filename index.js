@@ -13,11 +13,6 @@ var data = require("./config/Data");
 var walletData = data.walletData;
 var hero = data.hero;
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
-
-
 // Gets the hero section data 
 app.get("/api/hero", (req, res) => {
   res.send(hero);
@@ -68,12 +63,12 @@ app.use(express.static("public"));
 
 app.use('/images', express.static('./images'));
 
-// All other GET requests not handled before will return our React app
-// app.get("*", (req, res) => {
-//   res.sendFile(
-//     path.join(__dirname, ".", "client", "build", "index.html")
-//   );
-// });
+//All other GET requests not handled before will return our React app
+app.get("*", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, ".", "client", "build", "index.html")
+  );
+});
 
 
 
