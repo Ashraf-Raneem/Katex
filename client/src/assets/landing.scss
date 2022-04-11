@@ -1,0 +1,570 @@
+:root{
+    --primary : #1F33D8;
+    --yellow : #FFD456;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+// utilities
+.text-primary{
+    color: var(--primary);
+}
+.text-yellow{
+    color: var(--yellow);
+}
+.button-primary{
+    background-color: var(--primary);
+    color: white;
+}
+.button-white {
+    background-color: white;
+    color: black;
+}
+
+h1,h2,h3 {
+    font-weight: bold;
+    font-size: 3em;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// Navbar
+.intro{
+    &-navbar{
+        width: 100vw;
+        background: #F4F5FA;
+        position: fixed;
+        z-index: 999;
+        padding: 20px 0px;
+    }
+    &-wrap{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &-action{
+        display: none;
+    }
+    &-nav-sm{
+        display: none;
+    }
+    &-nav-link{
+        color: black !important;
+    }
+    &-nav-item{
+        color: black !important;
+    }
+}
+
+// Hero
+.hero{
+    &-container {
+        background: #F4F5FA;
+        padding-top: 4rem;
+    }
+    &-inner{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &-content {
+        width: 90%;
+        display: flex;
+        margin-left: 10rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+    &-info{
+        width: 700px;
+        margin: 0px auto;
+        h1{
+            font-size: 72px;
+        }
+        p{
+            font-size: 22px;
+            font-weight: 700;
+        }
+    }
+    &-action{
+        display: flex;
+        flex-direction: row;
+        margin: 40px 0px;
+        .btn{
+            margin-right: 20px;
+            border-radius: 20px;
+            padding: 10px 40px;
+            border: none;
+        }
+    }
+}
+
+// About 
+.about{
+    &-header {
+        text-align: center;
+        margin: 6rem 0px;
+    }
+    &-content {
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+    }
+    &-aside{
+       h2{
+           margin-bottom: 4rem;
+           font-size: 2.5rem;
+       }
+    }
+    &-video{
+        &-text{
+            margin-left: 3rem;
+            margin-bottom: 4rem;
+            &-link{
+                display: flex;
+                flex-direction: row;
+                color: var(--primary);
+                font-weight: bold;
+                text-decoration: none;
+            }
+            p {
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+        
+    }
+}
+
+
+// Wallet Cards
+.primary-wallet{
+    background-color: var(--primary) ;
+    background-image: url("../assets/images/wallet-bg-blue.png");
+    color: white;
+}
+.secondary-wallet{
+    background-color: var(--yellow) ;
+    background-image: url("../assets/images/wallet-bg-yellow.png");
+    color: black;
+}
+.wallet{
+    &-container{
+        height: 462px;
+        width: 373px;
+        padding: 20px 30px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 1rem;
+    }
+    &-cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1280px;
+    }
+    &-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 2rem 0px;
+        h4 {
+            margin-left: 12px;
+            font-size: 32px;
+        }
+    }
+    &-icons{
+        margin: 12px 0px;
+    }
+    &-action{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: 3rem;
+        margin-bottom: 3.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+}
+
+// Quick start 
+.qs {
+    &-container{
+        margin-left: 6rem;
+    }
+    &-content{
+        display: flex;
+        flex-direction: row;
+        margin: 1.5rem 0px;
+    }
+    &-image{
+        height: 130px;
+        width: 130px;
+        &-container{
+            background-color: var(--yellow);
+            border-radius: 999px;
+        }
+    }
+    &-desc{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        margin-left: 2rem;
+        width: 300px;
+        h3{
+            font-size: 23px;
+            font-weight: bold;
+        }
+        span{
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
+
+// Advert
+.advert{
+    &-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 8rem 0px;
+    }
+    &-header{
+        h4{
+            font-size: 48px;
+            font-weight: 700;
+        }
+    }
+    &-card-mx{
+        height: 462px;
+        width: 430px;
+    }
+    &-action{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 60px;
+        width: 194px;
+        margin-left: 0px;
+        border-radius: 0px 50px 50px 0px;
+        margin-bottom: 3.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-primary{
+            background-color: var(--yellow);
+            color: black;
+            font-weight: bold;
+        }
+        &-secondary{
+            background-color: var(--primary);
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
+
+// Account 
+.account{
+    &-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        background: var(--primary);
+        border-bottom: 8px solid var(--yellow);
+    }
+    &-flex{
+        display: flex;
+        flex-direction: row;
+    }
+    &-content{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        color: white;
+        p {
+            font-size: 16px;
+        }
+        h4{
+            font-size: 40px;
+            font-weight: 700;
+        }
+    }
+}
+
+// Footer 
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 2rem 4rem;
+    &-container {
+        display: flex;
+        flex-direction: row;
+    }
+    &-brand {
+        width: 40px;
+        margin-bottom: 20px;
+    }
+    &-main {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        span {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        &-socials{
+            display: flex;
+            flex-direction: row;
+            margin-top: 10px;
+        }
+    }
+    &-sub{
+        &-column{
+            width: 250px;
+            h4{
+                color: #0E133A;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+        &-links{
+            display: flex;
+            flex-direction: column;
+            span{
+                margin-top: 16px;
+                color:  #5B5D6D;
+            }
+        }
+    }
+    &-index{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+        color: #5B5D6D;
+    }
+}
+
+@media screen and (max-width: 1610px) {
+    .hero{
+        &-tree{
+            img{
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 1400px) {
+    .hero{
+        &-container {
+           padding: 5rem 0px;
+        }
+        &-inner{
+            display: flex;
+            flex-direction: column;
+        }
+        &-content {
+            width: 100%;
+            display: flex;
+            margin-left: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        &-info{
+            width: 100%;
+            padding: 0 2rem;
+            h1{
+                font-size: 48px;
+            }
+            p{
+                font-size: 22px;
+                font-weight: 700;
+            }
+        }
+        &-action{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0px;
+            .btn{
+                margin-right: 20px;
+                border-radius: 20px;
+                padding: 10px 40px;
+                border: none;
+            }
+        }
+        &-tree {
+            display: none;
+        }
+    }
+    .qs {
+        &-container{
+            margin-left: 0;
+        }
+    }
+    .account{
+        &-flex{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .about{
+        &-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-aside{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &-image > img {
+                height: auto;
+                width: 100%;
+            }
+         }
+        &-video{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &-text{
+                margin-left: 3rem;
+                margin: 4rem 0px;
+            }
+            &-image > img{
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+    .footer{
+        padding: 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .intro{
+        &-nav{
+            display: none;
+            &-sm{
+                width: 250px;
+                height: 101vh;
+                position: fixed;
+                left: 0;
+                top: 0;
+                background: #F4F5FA;
+                z-index: 2;
+                transition: all 0.5s;
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow:5px 10px #F4F5FA;
+                .nav{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        &-action{
+            display: block;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 666px) {
+    .about{
+        &-header{
+            h1{
+                font-size: 32px;
+            }
+        }
+        &-aside{
+            text-align: center;
+            h2{
+                font-size: 28px;
+            }
+        }
+    }
+    .account{
+        &-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .wallet {
+        &-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 2rem 0px;
+            h4 {
+                margin-left: 12px;
+                font-size: 32px;
+            }
+        }
+    }
+    .footer{
+        &-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-brand{
+            width: 100%;
+        }
+        &-main{
+            margin-bottom: 2rem;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
